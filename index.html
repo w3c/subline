@@ -316,13 +316,13 @@ header p.subline {
 <div>
  <header role="banner">
  <h1>The subline element</h1>
-<p class="subline">An HTML5 extension specification</p>
-<p class="subline">Unofficial Draft, last updated 29 may 2013</p>
+<p class="subline">An HTML5 extension specification</p> 
+<p class="subline">Unofficial Draft, last updated 5 Jun 2013</p>
   </header>
 <footer role="contentinfo"><dl><dt>Editor:</dt>
-  <dd>Steve Faulkner, The Paciello Group <span class="ed_mailto"><a href="mailto:sfaulkner@paciellogroup.com">sfaulkner@paciellogroup.com</a></span> </dd></dl>
+  <dd>Steve Faulkner, The Paciello Group <span class="ed_mailto"><a href="mailto:sfaulkner@paciellogroup.com">sfaulkner@paciellogroup.com</a></span> </dd></dl> 
   <h2>About this document </h2>
-  <p>This specification is an extension to the <a href="http://www.w3.org/html/wg/drafts/html/master/">HTML 5.1 specification</a>. It defines an element to be used for the identification of single or multiple subheadings, subtitles, taglines or bylines.  All normative content in the HTML5 specification, unless specifically overridden by this specification, is intended to be the basis for this specification.</p>
+  <p>This specification is an extension to the <a href="http://www.w3.org/html/wg/drafts/html/master/">HTML 5.1 specification</a>. It defines an element to be used for the identification of single or multiple subheadings, subtitles, taglines or bylines.  All normative content in the <a href="http://www.w3.org/html/wg/drafts/html/master/">HTML 5.1 specification</a>, unless specifically overridden by this specification, is intended to be the basis for this specification.</p>
   <!--<p> You can make a comment regarding this document, please either submit it using the <A href="https://www.w3.org/Bugs/Public/enter_bug.cgi?product=HTML%20WG&component=Using%20ARIA%20in%20HTML">W3C public bug database</A> (note: you need to have an account to post bugs), or send it as an e-mail message to <A href="mailto:public-html-comments@w3.org">public-html-comments@w3.org</A> (<A href="mailto:public-html-comments-request@w3.org?subject=subscribe">subscribe</A>, <A href="http://lists.w3.org/Archives/Public/public-html-comments/">archives</A>).  Comment and feedback is welcome.</p>
   <p><em>This living specification may be used under the terms of <a href="http://creativecommons.org/publicdomain/zero/1.0/" rel="license">CC0 1.0 Universal</a>.  To the extent possible under law, the editor has waived all copyright and  related or neighboring rights to this work. </em></p>-->
 <p>A document detailing <a href="http://www.w3.org/html/wg/wiki/ChangeProposals/hgroup">why the subline element</a> has been defined is also available.</p>
@@ -334,74 +334,51 @@ header p.subline {
     <dd><a href="http://dev.w3.org/html5/spec/content-models.html#flow-content">Flow content</a></dd>
     <dd><a href="http://dev.w3.org/html5/spec/content-models.html#palpable-content">Palpable content</a></dd>
     <dt>Contexts in which this element can be used:</dt>
-    <dd>Where <a href="content-models.html#flow-content">flow content</a> is expected.</dd>
-
+    <dd>As a descendant of an <a href="#the-h1-h2-h3-h4-h5-and-h6-elements">header</a> element</dd>
+    <dd>As a child of an <a href="http://www.w3.org/html/wg/drafts/html/master/sections.html#the-header-element">h1 to h6</a> element</dd>
+    
     <dt>Content model:</dt>
-    <dd><a href="http://dev.w3.org/html5/spec/content-models.html#phrasing-content">Phrasing content</a>.
-     Zero or more <a href="http://dev.w3.org/html5/spec/the-div-element.html#the-div-element">div</a> and/or <a href="http://dev.w3.org/html5/spec/the-p-element.html#the-p-element">p</a> elements.</dd>
-
+    <dd><a href="http://dev.w3.org/html5/spec/content-models.html#phrasing-content">Phrasing content</a>.     </dd>
+    
     <dt>Content attributes:</dt>
     <dd><a href="http://dev.w3.org/html5/spec/elements.html#global-attributes">Global attributes</a></dd>
     <dt>DOM interface:</dt>
     <dd>Uses <code><a href="http://dev.w3.org/html5/spec/elements.html#htmlelement">HTMLElement</a></code>.</dd>
     </dl>
-  <p>The <code>subline</code> element <a href="rendering.html#represents">represents</a> a single or multiple subheadings, subtitles,
-    taglines or bylines for a <code><a href="#the-h1-h2-h3-h4-h5-and-h6-elements">h1</a></code>, <code><a href="#the-h1-h2-h3-h4-h5-and-h6-elements">h2</a></code>, <code><a href="#the-h1-h2-h3-h4-h5-and-h6-elements">h3</a></code>, <code><a href="#the-h1-h2-h3-h4-h5-and-h6-elements">h4</a></code>, <code><a href="#the-h1-h2-h3-h4-h5-and-h6-elements">h5</a></code>, or <code><a href="#the-h1-h2-h3-h4-h5-and-h6-elements">h6</a></code> element. The <code>subline</code> element content is associated with the first preceding heading element.</p><div class="example">
+  <p>The <code>subline</code> element <a href="rendering.html#represents">represents</a> a  subheading, subtitle or alternative title when used as a child of
+    a <code><a href="#the-h1-h2-h3-h4-h5-and-h6-elements">h1</a></code>, <code><a href="#the-h1-h2-h3-h4-h5-and-h6-elements">h2</a></code>, <code><a href="#the-h1-h2-h3-h4-h5-and-h6-elements">h3</a></code>, <code><a href="#the-h1-h2-h3-h4-h5-and-h6-elements">h4</a></code>, <code><a href="#the-h1-h2-h3-h4-h5-and-h6-elements">h5</a></code>, or <code><a href="#the-h1-h2-h3-h4-h5-and-h6-elements">h6</a></code> element. When used as a descendant of a <code>header</code> element which has a descendant <code><a href="#the-h1-h2-h3-h4-h5-and-h6-elements">h1</a></code>, <code><a href="#the-h1-h2-h3-h4-h5-and-h6-elements">h2</a></code>, <code><a href="#the-h1-h2-h3-h4-h5-and-h6-elements">h3</a></code>, <code><a href="#the-h1-h2-h3-h4-h5-and-h6-elements">h4</a></code>, <code><a href="#the-h1-h2-h3-h4-h5-and-h6-elements">h5</a></code>, or <code><a href="#the-h1-h2-h3-h4-h5-and-h6-elements">h6</a></code> element it represents a tagline, standfirst, or byline.</p>
+  <p><code>subline</code> content that is</p>
+  <div class="example">
+    <p>Here are some examples of use of the <code>subline</code> element. </p>
+    <p>As a child of a heading indicating a subtitle:</p>
+      
+      <pre>&lt;h1&gt;
+Dr. Strangelove <strong>&lt;subline&gt;</strong>Or: How I Learned to Stop Worrying and Love the Bomb<strong>&lt;/subline&gt;
+</strong>&lt;/h1&gt;</pre>
+    <p>As a descendant of a <code>header</code> element that contains a heading, indicating a standfirst. Note the use of the microdata attributes which provide for more granular semantics.</p>
+    <pre>
+&lt;html itemtype="http://schema.org/NewsArticle"&gt;
+... 
 
-      <p>Here are some examples of valid use of the <code>subline</code> element. In each case, the
-        <code>subline</code> content represents the text that is a subheading, subtitle,
-        tagline or byline of a heading. The <code>subline</code> content would not be used as a
-        heading in an application extracting heading data and ignoring
-      subheadings.</p>
+&lt;header&gt;
 
-      <pre>
- &lt;h1&gt;The reality dysfunction&lt;/h1&gt;
- <strong>&lt;subline&gt;</strong>Space is not the only void<strong>&lt;/subline&gt;</strong>
+<span role="treeitem">&lt;h1 <span collapsed="false">itemprop</span>="<span collapsed="false">name headline</span>"&gt;</span>
+Syrian town of Qusair falls to Hezbollah in breakthrough for Assad
+&lt;/h1&gt;
 
-   </pre>
+<strong>&lt;subline<span role="treeitem"> itemprop="description" </span>&gt;
+</strong>Rebels confirm they have pulled out of strategic town after 
+three-week siege by Lebanese militia
+<strong>&lt;/subline&gt;</strong><strong></strong><strong>
 
-      <pre>
- &lt;h1&gt;Dr. Strangelove&lt;/h1&gt;
- <strong>&lt;subline&gt;</strong>&lt;p&gt;Or: How I Learned to Stop Worrying and Love the Bomb&lt;/p&gt;<strong>&lt;/subline&gt;</strong>
- <strong>&lt;subline&gt;</strong>&lt;p&gt;Starring Peter sellers&lt;/p&gt;<strong>&lt;/subline&gt;
-</strong></pre>
+</strong>&lt;/header&gt;
 
-      <p>The reason for using <code>subline</code> in these examples is to
-      convey the semantics of the <code><a href="#">p</a></code> element (as a subheading, subtitle,
-    tagline or byline). </p>
-      <p>Assistive technology may convey the semantic of the subline element. Thus for an assistive technology user the first example above could be announced as:</p>
-      <p>&quot;<em>heading level 1</em> The reality dysfunction <em>subline</em> Space is not the only void&quot;  </p>
-      <p>In the following example the  heading has 2 associated <code>subline</code> elements the first containing the subtitle and the second containing further information about the subject of the heading.</p>
-      <pre>&lt;h1&gt;Dr. Strangelove&lt;/h1&gt; <code><a href="#the-h1-h2-h3-h4-h5-and-h6-elements"></a></code></pre>
-      <pre><strong>&lt;subline&gt;</strong>&lt;p&gt;Or: How I Learned to Stop Worrying and Love the Bomb&lt;/p&gt;<strong>&lt;/subline&gt;</strong></pre>
-      <pre><strong>&lt;subline&gt;</strong>
-&lt;p&gt;Starring Peter sellers.&lt;/p&gt;
-&lt;p&gt;Directed by Stanley Kubrick.&lt;/p&gt;
-<strong>&lt;/subline&gt;</strong></pre>
-      <p>If you want to group a heading and its associated subline content, because as a whole it is acting as header content use the the <code>header</code> element.</p>
-      <pre>
-<strong>&lt;header&gt;</strong>
-&lt;h1&gt;Dr. Strangelove&lt;/h1&gt; <code><a href="#the-h1-h2-h3-h4-h5-and-h6-elements"></a></code></pre>
-      <pre>&lt;subline&gt;&lt;p&gt;Or: How I Learned to Stop Worrying and Love the Bomb&lt;/p&gt;&lt;/subline&gt;</pre>
-      <pre>&lt;subline&gt;
-&lt;p&gt;Starring Peter sellers.&lt;/p&gt;
-&lt;p&gt;Directed by Stanley Kubrick.&lt;/p&gt;
-&lt;/subline&gt;
+...
 
-<strong>&lt;/header&gt;</strong>
-  </pre>
-      <p>Although in many cases it may be appropriate to use the <code>subline</code> element as a semantic container for other elements, it is not required.</p>
-      <pre>&lt;h1&gt;US prisoners refused all books except Bible&lt;/h1&gt;
-<strong>&lt;subline&gt;</strong>American Civil Liberties Union says jail in South Carolina is banning books
-'for no good reason'<strong>&lt;/subline&gt;</strong></pre>
-      <p>If you want to group a heading and its associated subline content purely for styling purposes, use a <code>div</code> element. </p>
-      <pre><strong>&lt;div id=&quot;stylinghook&quot;&gt;</strong>
-&lt;h1&gt;US prisoners refused all books except Bible&lt;/h1&gt;
-&lt;subline&gt;American Civil Liberties Union says jail in South Carolina is banning books
-'for no good reason'&lt;/subline&gt;
-<strong>&lt;/div&gt;</strong></pre>
-      </div>
-
-
+      
+      </pre>
+  </div>
+  
+      
 </div>
 </body></html>

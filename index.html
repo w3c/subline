@@ -302,22 +302,22 @@
      font-weight: bold;
      src: url('../fonts/Essays1743-BoldItalic.ttf');
    }
-header p.subline {
+header p.subhead {
     color: #005A9C;
     font: 140% sans-serif;
     margin: 0.75em 0;
 }
   </style>
   <link href="http://www.w3.org/StyleSheets/TR/w3c-unofficial" rel="stylesheet" type="text/css"/>
-<title>The subline element - HTML extension specification</title>
+<title>The subhead element - HTML extension specification</title>
 </head>
 
 <body>
 <div>
  <header role="banner">
- <h1>The subline element</h1>
-<p class="subline">An HTML5 extension specification</p> 
-<p class="subline">Unofficial Draft, last updated 8 Jun 2013</p>
+ <h1>The subhead element</h1>
+<p class="subhead">An HTML5 extension specification</p> 
+<p class="subhead">Unofficial Draft, last updated 8 Jun 2013</p>
   </header>
 <footer role="contentinfo"><dl><dt>Editor:</dt>
   <dd>Steve Faulkner, The Paciello Group <span class="ed_mailto"><a href="mailto:sfaulkner@paciellogroup.com">sfaulkner@paciellogroup.com</a></span> </dd></dl> 
@@ -325,11 +325,11 @@ header p.subline {
   <p>This specification is an extension to the <a href="http://www.w3.org/html/wg/drafts/html/master/">HTML 5.1 specification</a>. It defines an element to be used for the identification of single or multiple subheadings, subtitles, taglines or bylines.  All normative content in the <a href="http://www.w3.org/html/wg/drafts/html/master/">HTML 5.1 specification</a>, unless specifically overridden by this specification, is intended to be the basis for this specification.</p>
   <!--<p> You can make a comment regarding this document, please either submit it using the <A href="https://www.w3.org/Bugs/Public/enter_bug.cgi?product=HTML%20WG&component=Using%20ARIA%20in%20HTML">W3C public bug database</A> (note: you need to have an account to post bugs), or send it as an e-mail message to <A href="mailto:public-html-comments@w3.org">public-html-comments@w3.org</A> (<A href="mailto:public-html-comments-request@w3.org?subject=subscribe">subscribe</A>, <A href="http://lists.w3.org/Archives/Public/public-html-comments/">archives</A>).  Comment and feedback is welcome.</p>
   <p><em>This living specification may be used under the terms of <a href="http://creativecommons.org/publicdomain/zero/1.0/" rel="license">CC0 1.0 Universal</a>.  To the extent possible under law, the editor has waived all copyright and  related or neighboring rights to this work. </em></p>-->
-<p>A document detailing <a href="http://www.w3.org/html/wg/wiki/ChangeProposals/hgroup">why the subline element</a> has been defined is also available.</p>
+<p>A document detailing <a href="http://www.w3.org/html/wg/wiki/ChangeProposals/hgroup">why the subhead element</a> has been defined is also available.</p>
 <p class="warning"><strong>WARNING!</strong> This an early draft of a proposed feature, it can and will change without notice!</p>
 </footer>
 <div role="main">
-  <h3>The <dfn><code>subline</code></dfn> element</h3>
+  <h3>The <dfn><code>subhead</code></dfn> element</h3>
   <dl class="element"><dt>Categories</dt>
     <dd><a href="http://www.w3.org/html/wg/drafts/html/master/content-models.html#flow-content">Flow content</a></dd>
     <dd><a href="http://www.w3.org/html/wg/drafts/html/master/content-models.html#palpable-content">Palpable content</a></dd>
@@ -345,19 +345,19 @@ header p.subline {
     <dt>DOM interface:</dt>
     <dd>Uses <code><a href="http://www.w3.org/html/wg/drafts/html/master/elements.html#htmlelement">HTMLElement</a></code>.</dd>
     </dl>
-  <p>The <code>subline</code> element when used as a child of
+  <p>The <code>subhead</code> element when used as a child of
     a <code><a href="http://www.w3.org/html/wg/drafts/html/master/sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements">h1 to h6</a></code> element, <a href="http://www.w3.org/html/wg/drafts/html/master/rendering.html#represents">represents</a> a  secondary part of a heading . When used as a descendant of a <code>header</code> element which has a descendant <code><a href="http://www.w3.org/html/wg/drafts/html/master/sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements">h1 to h6</a></code> element it represents a tagline, standfirst, or byline for a heading.  </p>
-  <p>When <code>subline</code> is present as a child of a heading, software employing the outline algorithm to produce a document outline may mask or present the content of the of the subline element as differentiated from the main heading content.</p>
+  <p>When <code>subhead</code> is present as a child of a heading, software employing the outline algorithm to produce a document outline may mask or present the content of the of the subhead element as differentiated from the main heading content.</p>
   <div class="example">
-    <p>Here are some examples of use of the <code>subline</code> element. </p>
+    <p>Here are some examples of use of the <code>subhead</code> element. </p>
     <p>As a child of a heading indicating a subtitle:</p>
       
 <pre>&lt;h1&gt;
-Dr. Strangelove <strong>&lt;subline&gt;</strong>Or: How I Learned to Stop Worrying and Love the Bomb<strong>&lt;/subline&gt;
+Dr. Strangelove <strong>&lt;subhead&gt;</strong>Or: How I Learned to Stop Worrying and Love the Bomb<strong>&lt;/subhead&gt;
 </strong>&lt;/h1&gt;</pre>
 <p>a second example used as a child of a heading to indicate a subtitle:</p>    
 <pre>&lt;h1>HTML
-&lt;subline>Living Standard — Last Updated 8 June 2013&lt;/subline>&lt;/h1></pre>
+&lt;subhead>Living Standard — Last Updated 8 June 2013&lt;/subhead>&lt;/h1></pre>
 <p>As a descendant of a <code>header</code> element that contains a heading, indicating a standfirst. Note the use of the microdata 
 attributes which provide for more granular semantics.</p>
     <pre>
@@ -370,10 +370,10 @@ attributes which provide for more granular semantics.</p>
 Syrian town of Qusair falls to Hezbollah in breakthrough for Assad
 &lt;/h1&gt;
 
-<strong>&lt;subline itemprop="description"&gt;
+<strong>&lt;subhead itemprop="description"&gt;
 </strong>Rebels confirm they have pulled out of strategic town after 
 three-week siege by Lebanese militia
-<strong>&lt;/subline&gt;</strong>
+<strong>&lt;/subhead&gt;</strong>
 &lt;/header&gt;
 
 ...

@@ -345,40 +345,41 @@ header p.subline {
     <dt>DOM interface:</dt>
     <dd>Uses <code><a href="http://dev.w3.org/html5/spec/elements.html#htmlelement">HTMLElement</a></code>.</dd>
     </dl>
-  <p>The <code>subline</code> element <a href="rendering.html#represents">represents</a> a  subheading, subtitle or alternative title when used as a child of
-    a <code><a href="#the-h1-h2-h3-h4-h5-and-h6-elements">h1</a></code>, <code><a href="#the-h1-h2-h3-h4-h5-and-h6-elements">h2</a></code>, <code><a href="#the-h1-h2-h3-h4-h5-and-h6-elements">h3</a></code>, <code><a href="#the-h1-h2-h3-h4-h5-and-h6-elements">h4</a></code>, <code><a href="#the-h1-h2-h3-h4-h5-and-h6-elements">h5</a></code>, or <code><a href="#the-h1-h2-h3-h4-h5-and-h6-elements">h6</a></code> element. When used as a descendant of a <code>header</code> element which has a descendant <code><a href="#the-h1-h2-h3-h4-h5-and-h6-elements">h1</a></code>, <code><a href="#the-h1-h2-h3-h4-h5-and-h6-elements">h2</a></code>, <code><a href="#the-h1-h2-h3-h4-h5-and-h6-elements">h3</a></code>, <code><a href="#the-h1-h2-h3-h4-h5-and-h6-elements">h4</a></code>, <code><a href="#the-h1-h2-h3-h4-h5-and-h6-elements">h5</a></code>, or <code><a href="#the-h1-h2-h3-h4-h5-and-h6-elements">h6</a></code> element it represents a tagline, standfirst, or byline.</p>
-  
+  <p>The <code>subline</code> element when used as a child of
+    a <code><a href="http://www.w3.org/html/wg/drafts/html/master/sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements">h1 to h6</a></code> element, <a href="http://www.w3.org/html/wg/drafts/html/master/rendering.html#represents">represents</a> a  secondary part of a heading . When used as a descendant of a <code>header</code> element which has a descendant <code><a href="http://www.w3.org/html/wg/drafts/html/master/sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements">h1 to h6</a></code> element it represents a tagline, standfirst, or byline for a heading.  </p>
+  <p>When <code>subline</code> is present as a child of a heading, software employing the outline algorithm to produce a document outline may mask or present the content of the of the subline element as differentiated from the main heading content.</p>
   <div class="example">
     <p>Here are some examples of use of the <code>subline</code> element. </p>
     <p>As a child of a heading indicating a subtitle:</p>
       
-      <pre>&lt;h1&gt;
+<pre>&lt;h1&gt;
 Dr. Strangelove <strong>&lt;subline&gt;</strong>Or: How I Learned to Stop Worrying and Love the Bomb<strong>&lt;/subline&gt;
 </strong>&lt;/h1&gt;</pre>
-    <p>As a descendant of a <code>header</code> element that contains a heading, indicating a standfirst. Note the use of the microdata attributes which provide for more granular semantics.</p>
+<p>a second example used as a child of a heading to indicate a subtitle:</p>    
+<pre>&lt;h1>HTML
+&lt;subline>Living Standard — Last Updated 8 June 2013&lt;/subline>&lt;/h1></pre>
+<p>As a descendant of a <code>header</code> element that contains a heading, indicating a standfirst. Note the use of the microdata 
+attributes which provide for more granular semantics.</p>
     <pre>
-&lt;html itemtype="http://schema.org/NewsArticle"&gt;
+&lt;html itemscope itemtype="http://schema.org/NewsArticle"&gt;
 ... 
 
 &lt;header&gt;
 
-<span role="treeitem">&lt;h1 <span collapsed="false">itemprop</span>="<span collapsed="false">name headline</span>"&gt;</span>
+&lt;h1 itemprop="name headline"&gt;
 Syrian town of Qusair falls to Hezbollah in breakthrough for Assad
 &lt;/h1&gt;
 
-<strong>&lt;subline<span role="treeitem"> itemprop="description" </span>&gt;
+<strong>&lt;subline itemprop="description"&gt;
 </strong>Rebels confirm they have pulled out of strategic town after 
 three-week siege by Lebanese militia
-<strong>&lt;/subline&gt;</strong><strong></strong><strong>
-
-</strong>&lt;/header&gt;
+<strong>&lt;/subline&gt;</strong>
+&lt;/header&gt;
 
 ...
 
-      
       </pre>
   </div>
-  
-      
+
 </div>
 </body></html>

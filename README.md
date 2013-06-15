@@ -1,4 +1,4 @@
-subline
+subhead
 =======
 
-The subline element An HTML extension specification
+The subhead element An HTML extension specification
